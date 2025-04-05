@@ -1,0 +1,15 @@
+---
+title: "Jay Lee"
+image: "images/Profile.png"
+about:
+    template: jolla
+    links:
+        - icon: envelope
+          href: malito:jal167@ucsd.edu
+        - icon: linkedin
+          href: https://www.linkedin.com/in/hakjinl/
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.

@@ -1,0 +1,7 @@
+---
+title: "Jay's Resume"
+---
+
+_Last updated 04/05/2025_
+
+{{< pdf other_documents/resume.pdf width=100% height=800 >}}
