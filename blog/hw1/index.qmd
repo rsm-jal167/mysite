@@ -1,9 +1,16 @@
 ---
-title: Homework 1
+title: Homework 1 - A/B Testing
 author: Jay Lee
 ---
 
 # Question 1 
 
-Prof says make a chart
+```{python}
+import pandas as pd
+
+df = pd.read_stata("karlan_list_2007.dta")
+
+df.head()
+
+```
 

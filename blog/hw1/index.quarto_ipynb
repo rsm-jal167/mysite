@@ -5,24 +5,25 @@
       "metadata": {},
       "source": [
         "---\n",
-        "title: Homework 1\n",
+        "title: Homework 1 - A/B Testing\n",
         "author: Jay Lee\n",
         "---\n",
         "\n",
-        "# Question 1 \n",
-        "\n",
-        "Prof says make a chart\n"
+        "# Question 1 "
       ],
-      "id": "548c19bb"
+      "id": "aad590af"
     },
     {
       "cell_type": "code",
       "metadata": {},
       "source": [
-        "x=5\n",
-        "print(x)"
+        "import pandas as pd\n",
+        "\n",
+        "df = pd.read_stata(\"karlan_list_2007.dta\")\n",
+        "\n",
+        "df.head()"
       ],
-      "id": "65d41b48",
+      "id": "5f84701e",
       "execution_count": null,
       "outputs": []
     }
