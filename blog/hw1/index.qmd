@@ -6,11 +6,10 @@ author: Jay Lee
 # Question 1 
 
 ```{python}
-import pandas as pd
 
-df = pd.read_stata("karlan_list_2007.dta")
-
-df.head()
+with open("hw1.ipynb", "r") as f:
+    code = f.read()
+    print(code)
 
 ```
 
