@@ -201,11 +201,11 @@ def poisson_regression_loglikelihood(beta, Y, X):
 
 ```
 
-![Result 1]("images/Result 1.png")
+![Update likelihood function with an additional argument to take in a covariate matrix.]("images/Result 1.png")
 
 
 
-![Result 1]("images/Result 3.png")
+![Check results using Python.sm.GLM() function]("images/Result 3.png")
 
 
 
@@ -213,12 +213,6 @@ Key Takeaways:
      1. Blueprinty customers are significantly more successful in patenting, even after controlling for firm age and region.
      2. There is a non-linear relationship with age: younger firms patent less, middle-aged firms patent more, and very old firms plateau or decline.
      3. Region does not matter much after accounting for other variables.
-
-```{python}
-
-
-```
-
 
 ## AirBnB Case Study
 

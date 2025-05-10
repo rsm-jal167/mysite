@@ -234,7 +234,7 @@ window.Quarto = {
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<div id="e0dd381c" class="cell" data-execution_count="1">
+<div id="b3bd36ea" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display" data-execution_count="1">
 <div>
 
@@ -291,7 +291,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div id="71891e8d" class="cell" data-execution_count="2">
+<div id="4e9f9bfd" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -306,7 +306,7 @@ Mean patents - Non-Customers: 3.4730127576054954</code></pre>
 </div>
 <p>Observation: Firms using Blueprinty’s software tend to have a higher average number of patients.</p>
 <p>Blueprinty customers are not selected at random. It may be important to account for systematic differences in the age and regional location of customers vs non-customers.</p>
-<div id="4b128cf1" class="cell" data-execution_count="3">
+<div id="003f5680" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -333,7 +333,7 @@ Mean patents - Non-Customers: 3.4730127576054954</code></pre>
 <figcaption>Mathematical Expression</figcaption>
 </figure>
 </div>
-<div id="af245367" class="cell" data-execution_count="4">
+<div id="68d471f3" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -342,7 +342,7 @@ Mean patents - Non-Customers: 3.4730127576054954</code></pre>
 </div>
 </div>
 </div>
-<div id="86a4139a" class="cell" data-execution_count="5">
+<div id="ba20c663" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>MLE for lambda: 3.6847
 Maximum Log-Likelihood: -3367.6838</code></pre>
@@ -352,10 +352,19 @@ Maximum Log-Likelihood: -3367.6838</code></pre>
 <section id="estimation-of-poisson-regression-model" class="level3">
 <h3 class="anchored" data-anchor-id="estimation-of-poisson-regression-model">Estimation of Poisson Regression Model</h3>
 <p>Next, we extend our simple Poisson model to a Poisson Regression Model such that <span class="math inline">\(Y_i = \text{Poisson}(\lambda_i)\)</span> where <span class="math inline">\(\lambda_i = \exp(X_i'\beta)\)</span>. The interpretation is that the success rate of patent awards is not constant across all firms (<span class="math inline">\(\lambda\)</span>) but rather is a function of firm characteristics <span class="math inline">\(X_i\)</span>. Specifically, we will use the covariates age, age squared, region, and whether the firm is a customer of Blueprinty.</p>
-<p><em>todo: Use your function along with R’s optim() or Python’s sp.optimize() to find the MLE vector and the Hessian of the Poisson model with covariates. Specifically, the first column of X should be all 1’s to enable a constant term in the model, and the subsequent columns should be age, age squared, binary variables for all but one of the regions, and the binary customer variable. Use the Hessian to find standard errors of the beta parameter estimates and present a table of coefficients and standard errors.</em></p>
-<p><em>todo: Check your results using R’s glm() function or Python sm.GLM() function.</em></p>
-<p><em>todo: Interpret the results.</em></p>
-<p><em>todo: What do you conclude about the effect of Blueprinty’s software on patent success? Because the beta coefficients are not directly interpretable, it may help to create two fake datasets: X_0 and X_1 where X_0 is the X data but with iscustomer=0 for every observation and X_1 is the X data but with iscustomer=1 for every observation. Then, use X_0 and your fitted model to get the vector of predicted number of patents (y_pred_0) for every firm in the dataset, and use X_1 to get Y_pred_1 for every firm. Then subtract y_pred_1 minus y_pred_0 and take the average of that vector of differences.</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="&quot;images/Result 1.png&quot;" class="img-fluid figure-img"></p>
+<figcaption>Update likelihood function with an additional argument to take in a covariate matrix.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="&quot;images/Result 3.png&quot;" class="img-fluid figure-img"></p>
+<figcaption>Check results using Python.sm.GLM() function</figcaption>
+</figure>
+</div>
+<p>Key Takeaways: 1. Blueprinty customers are significantly more successful in patenting, even after controlling for firm age and region. 2. There is a non-linear relationship with age: younger firms patent less, middle-aged firms patent more, and very old firms plateau or decline. 3. Region does not matter much after accounting for other variables.</p>
 </section>
 </section>
 <section id="airbnb-case-study" class="level2">
@@ -391,7 +400,7 @@ Variable Definitions
 </div>
 </div>
 </div>
-<div id="e4f548ab" class="cell" data-execution_count="7">
+<div id="36eac4b1" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> minimize</span>
@@ -469,7 +478,7 @@ dtype: int64
 Estimated coefficients: [0. 0. 0.]</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_95397/2212075169.py:22: RuntimeWarning:
+<pre><code>/tmp/ipykernel_9234/2212075169.py:22: RuntimeWarning:
 
 divide by zero encountered in log
 
