@@ -418,7 +418,7 @@ It makes sense that  $\beta_\text{price}$ is negative which means
 
 
 
-To move from a standard MNL to a multi-level (hierarchical) model, you allow each respondent to have their own set of preference parameters ($\beta_\text{i}$) rather than assuming everyone shares the same preferences. These individual-level $\beta_\text{i}$ are drawn from a population-level distribution. To simulate data, you would sample a unique $\beta_\text{i}$ for each person and use it to generate their choices. To estimate the model, you need to jointly infer the individual-level parameters and the population-level distribution, typically using Bayesian methods or simulation-based approaches. This structure captures heterogeneity in preferences and provides more realistic, personalized insights.
+To move from a standard MNL to a multi-level (hierarchical) model, you allow each respondent to have their own set of preference parameters ($\beta_\text{i}$) rather than assuming everyone shares the same preferences. These individual-level $\beta_\text{i}$ are drawn from a population-level distribution. To simulate data, you would sample a unique $\beta_\text{i}  $ for each person and use it to generate their choices. To estimate the model, you need to jointly infer the individual-level parameters and the population-level distribution, typically using Bayesian methods or simulation-based approaches. This structure captures heterogeneity in preferences and provides more realistic, personalized insights.
 
 
 

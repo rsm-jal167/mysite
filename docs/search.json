@@ -74,7 +74,7 @@
     "href": "projects.html",
     "title": "My Projects",
     "section": "",
-    "text": "Homework 1 - A/B Testing\n\n\n\n\nJay Lee\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPoisson Regression Examples\n\n\n\n\nJay Lee\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultinomial Logit Model\n\n\n\n\nJay Lee\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Homework 1 - A/B Testing\n\n\n\n\nJay Lee\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPoisson Regression Examples\n\n\n\n\nJay Lee\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultinomial Logit Model\n\n\n\n\nJay Lee\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMachine Learning\n\n\n\n\nJay Lee\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/hw1/index.html#introduction",
@@ -172,13 +172,48 @@
     "href": "blog/hw3/hw3_questions.html#estimation-via-bayesian-methods",
     "title": "Multinomial Logit Model",
     "section": "5. Estimation via Bayesian Methods",
-    "text": "5. Estimation via Bayesian Methods\n\n\n\nPosterior Summary Statistics:\n\n\n                  mean       std  95% CI Lower  95% CI Upper\nbeta_netflix  0.943901  0.110926      0.728919      1.162057\nbeta_prime    0.504969  0.112874      0.281528      0.727537\nbeta_ads     -0.736795  0.088498     -0.908537     -0.564415\nbeta_price   -0.099916  0.006585     -0.113193     -0.086820"
+    "text": "5. Estimation via Bayesian Methods\n\n\n\nPosterior Summary Statistics:\n\n\n                  mean       std  95% CI Lower  95% CI Upper\nbeta_netflix  0.952888  0.104658      0.750015      1.160545\nbeta_prime    0.505564  0.107215      0.303485      0.717821\nbeta_ads     -0.736592  0.089341     -0.915248     -0.560064\nbeta_price   -0.099911  0.006253     -0.112715     -0.088072"
   },
   {
     "objectID": "blog/hw3/hw3_questions.html#discussion",
     "href": "blog/hw3/hw3_questions.html#discussion",
     "title": "Multinomial Logit Model",
     "section": "6. Discussion",
-    "text": "6. Discussion\nWe observe three clear patterns in consumer preferences.\n\nBrand Preferences Are Hierarchical\nThe estimated coefficients indicate that Netflix is the most preferred brand, followed by Prime, with Hulu (the reference category) being the least preferred. Specifically, the coefficient for Netflix is larger than that for Prime, meaning that—holding ads and price constant—respondents are more likely to choose Netflix. This reflects stronger brand equity or perceived value associated with Netflix.\nStrong Aversion to Ads\nThe coefficient for the presence of ads is negative and significant, indicating that options with ads are less likely to be chosen. This suggests that consumers place high value on an ad-free experience, and that ad inclusion meaningfully reduces the appeal of a streaming service.\nNegative Price Sensitivity\nThe price coefficient is negative, which aligns with basic consumer theory: as price increases, the utility of an option decreases, making it less likely to be chosen. This means consumers are price sensitive, and all else equal, they are more likely to choose lower-cost streaming plans.\n\n\\(\\beta_\\text{Netflix} &gt; \\beta_\\text{Prime}\\) tells us that, all else equal (same price, same ad presence), people are more likely to choose Netflix over Prime. In a multinomial logit model, these coefficients reflect relative utility: - A higher coefficient = higher utility = higher choice probability. - So, Netflix is more preferred than Prime, and both are preferred over Hulu (the omitted brand).\nIt makes sense that \\(\\beta_\\text{price}\\) is negative which means - As price increases, the probability of choosing that option decreases. - This aligns with basic economic theory: people tend to prefer cheaper options when everything else is equal.\nTo move from a standard MNL to a multi-level (hierarchical) model, you allow each respondent to have their own set of preference parameters (\\(\\beta_\\text{i}\\)) rather than assuming everyone shares the same preferences. These individual-level \\(\\beta_\\text{i}\\) are drawn from a population-level distribution. To simulate data, you would sample a unique \\(\\beta_\\text{i}\\) for each person and use it to generate their choices. To estimate the model, you need to jointly infer the individual-level parameters and the population-level distribution, typically using Bayesian methods or simulation-based approaches. This structure captures heterogeneity in preferences and provides more realistic, personalized insights."
+    "text": "6. Discussion\nWe observe three clear patterns in consumer preferences.\n\nBrand Preferences Are Hierarchical\nThe estimated coefficients indicate that Netflix is the most preferred brand, followed by Prime, with Hulu (the reference category) being the least preferred. Specifically, the coefficient for Netflix is larger than that for Prime, meaning that—holding ads and price constant—respondents are more likely to choose Netflix. This reflects stronger brand equity or perceived value associated with Netflix.\nStrong Aversion to Ads\nThe coefficient for the presence of ads is negative and significant, indicating that options with ads are less likely to be chosen. This suggests that consumers place high value on an ad-free experience, and that ad inclusion meaningfully reduces the appeal of a streaming service.\nNegative Price Sensitivity\nThe price coefficient is negative, which aligns with basic consumer theory: as price increases, the utility of an option decreases, making it less likely to be chosen. This means consumers are price sensitive, and all else equal, they are more likely to choose lower-cost streaming plans.\n\n\\(\\beta_\\text{Netflix} &gt; \\beta_\\text{Prime}\\) tells us that, all else equal (same price, same ad presence), people are more likely to choose Netflix over Prime. In a multinomial logit model, these coefficients reflect relative utility: - A higher coefficient = higher utility = higher choice probability. - So, Netflix is more preferred than Prime, and both are preferred over Hulu (the omitted brand).\nIt makes sense that \\(\\beta_\\text{price}\\) is negative which means - As price increases, the probability of choosing that option decreases. - This aligns with basic economic theory: people tend to prefer cheaper options when everything else is equal.\nTo move from a standard MNL to a multi-level (hierarchical) model, you allow each respondent to have their own set of preference parameters (\\(\\beta_\\text{i}\\)) rather than assuming everyone shares the same preferences. These individual-level \\(\\beta_\\text{i}\\) are drawn from a population-level distribution. To simulate data, you would sample a unique $_ $ for each person and use it to generate their choices. To estimate the model, you need to jointly infer the individual-level parameters and the population-level distribution, typically using Bayesian methods or simulation-based approaches. This structure captures heterogeneity in preferences and provides more realistic, personalized insights."
+  },
+  {
+    "objectID": "blog/hw4/hw4_questions.html",
+    "href": "blog/hw4/hw4_questions.html",
+    "title": "Machine Learning",
+    "section": "",
+    "text": "This assignment explored the fundamentals of K-Nearest Neighbors (KNN) by generating a synthetic dataset with a nonlinear boundary and implementing the KNN algorithm from scratch. The model classified points based on proximity in feature space and was validated against scikit-learn’s built-in KNeighborsClassifier. Both versions achieved identical predictions and high accuracy (92%), confirming the correctness of the manual implementation. The exercise reinforced key concepts in distance-based learning, model evaluation, and visual interpretation of decision boundaries."
+  },
+  {
+    "objectID": "blog/hw4/hw4_questions.html#a.-k-means",
+    "href": "blog/hw4/hw4_questions.html#a.-k-means",
+    "title": "Machine Learning",
+    "section": "1a. K-Means",
+    "text": "1a. K-Means\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConverged at iteration 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHere are the results from evaluating K-Means clustering on the Palmer Penguins dataset using bill length and flipper length as features:"
+  },
+  {
+    "objectID": "blog/hw4/hw4_questions.html#a.-k-nearest-neighbors",
+    "href": "blog/hw4/hw4_questions.html#a.-k-nearest-neighbors",
+    "title": "Machine Learning",
+    "section": "2a. K Nearest Neighbors",
+    "text": "2a. K Nearest Neighbors\n\nHere is the decision boundary plot for a K-Nearest Neighbors (KNN) classifier with 𝑘=5, trained on synthetic dataset.\n\n\n\n\n\n\n\n\n\n\nRed and blue background regions: the predicted class labels for each location in the feature space.\n\nRed region = class 1 (where \\(x_2 &gt; \\sin(4x_1) + x_1\\))\nBlue region = class 0\n\nPoints:\n\nRed points = actual class 1\nBlue points = actual class 0\n\nThe black edges on points help you see how well the model classifies them relative to the predicted regions.\n\n\n\n\n\n\n\n\n\n\n\n\nHere’s the a test dataset with 100 points, using the same logic as the training set but with a different random seed to ensure independence:\n\n\n         x1        x2  y\n0  1.178815  0.078769  0\n1 -1.283164  0.999747  1\n2 -1.638891 -2.364549  0\n3  0.307889 -2.214630  0\n4  1.316814 -1.068116  0\n\n\n\n\nHere are the results from implementing KNN by hand and comparing it with scikit-learn’s KNeighborsClassifier using 𝑘=5:\n\n\n\nMetric\nValue\n\n\n\n\nAccuracy (Custom KNN)\n0.92\n\n\nAccuracy (scikit-learn)\n0.92\n\n\nPrediction Match Rate\n1.00\n\n\n\n\nBoth implementations yield the same predictions on all 100 test samples.\nThe accuracy of 92% suggests that the KNN model performs well in separating classes defined by the nonlinear boundary.\n\n\n\nCustom KNN Accuracy: 0.92"
+  },
+  {
+    "objectID": "blog/hw4/hw4_questions.html#within-cluster-sum-of-squares-wcss",
+    "href": "blog/hw4/hw4_questions.html#within-cluster-sum-of-squares-wcss",
+    "title": "Machine Learning",
+    "section": "1. Within-Cluster Sum of Squares (WCSS)",
+    "text": "1. Within-Cluster Sum of Squares (WCSS)\n\n* WCSS decreases as 𝐾 increases, which is expected because more clusters mean lower distances within each group.\n\n\n* However, look for the “elbow” point—where the decrease in WCSS slows down significantly.\n\n\n\nClusters (K)\nWCSS\n\n\n\n\n2\n20,950\n\n\n3\n13,860\n\n\n4\n9,587\n\n\n5\n7,425\n\n\n6\n6,341\n\n\n7\n5,264\n\n\n\n\n\nThe elbow appears around K = 3 or 4, where the drop in WCSS begins to flatten out."
+  },
+  {
+    "objectID": "blog/hw4/hw4_questions.html#silhouette-scores",
+    "href": "blog/hw4/hw4_questions.html#silhouette-scores",
+    "title": "Machine Learning",
+    "section": "2. Silhouette Scores",
+    "text": "2. Silhouette Scores\n\n* Silhouette Score quantifies how well points fit within their cluster vs. others.\n\n\n* Higher scores (closer to 1) are better.\n\n\n\nClusters (K)\nSilhouette Score\n\n\n\n\n2\n0.612\n\n\n3\n0.481\n\n\n4\n0.445\n\n\n5\n0.427\n\n\n6\n0.414\n\n\n7\n0.431\n\n\n\n\n\nThe highest silhouette score is at K = 2, suggesting this may be the most cohesive clustering structure."
   }
 ]

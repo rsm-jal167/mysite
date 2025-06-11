@@ -363,10 +363,10 @@ Posterior Summary Statistics:</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                  mean       std  95% CI Lower  95% CI Upper
-beta_netflix  0.943901  0.110926      0.728919      1.162057
-beta_prime    0.504969  0.112874      0.281528      0.727537
-beta_ads     -0.736795  0.088498     -0.908537     -0.564415
-beta_price   -0.099916  0.006585     -0.113193     -0.086820</code></pre>
+beta_netflix  0.952888  0.104658      0.750015      1.160545
+beta_prime    0.505564  0.107215      0.303485      0.717821
+beta_ads     -0.736592  0.089341     -0.915248     -0.560064
+beta_price   -0.099911  0.006253     -0.112715     -0.088072</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -392,7 +392,7 @@ beta_price   -0.099916  0.006585     -0.113193     -0.086820</code></pre>
 </ol>
 <p><span class="math inline">\(\beta_\text{Netflix} &gt; \beta_\text{Prime}\)</span> tells us that, all else equal (same price, same ad presence), people are more likely to choose Netflix over Prime. In a multinomial logit model, these coefficients reflect relative utility: - A higher coefficient = higher utility = higher choice probability. - So, Netflix is more preferred than Prime, and both are preferred over Hulu (the omitted brand).</p>
 <p>It makes sense that <span class="math inline">\(\beta_\text{price}\)</span> is negative which means - As price increases, the probability of choosing that option decreases. - This aligns with basic economic theory: people tend to prefer cheaper options when everything else is equal.</p>
-<p>To move from a standard MNL to a multi-level (hierarchical) model, you allow each respondent to have their own set of preference parameters (<span class="math inline">\(\beta_\text{i}\)</span>) rather than assuming everyone shares the same preferences. These individual-level <span class="math inline">\(\beta_\text{i}\)</span> are drawn from a population-level distribution. To simulate data, you would sample a unique <span class="math inline">\(\beta_\text{i}\)</span> for each person and use it to generate their choices. To estimate the model, you need to jointly infer the individual-level parameters and the population-level distribution, typically using Bayesian methods or simulation-based approaches. This structure captures heterogeneity in preferences and provides more realistic, personalized insights.</p>
+<p>To move from a standard MNL to a multi-level (hierarchical) model, you allow each respondent to have their own set of preference parameters (<span class="math inline">\(\beta_\text{i}\)</span>) rather than assuming everyone shares the same preferences. These individual-level <span class="math inline">\(\beta_\text{i}\)</span> are drawn from a population-level distribution. To simulate data, you would sample a unique $_ $ for each person and use it to generate their choices. To estimate the model, you need to jointly infer the individual-level parameters and the population-level distribution, typically using Bayesian methods or simulation-based approaches. This structure captures heterogeneity in preferences and provides more realistic, personalized insights.</p>
 
 
 </section>
